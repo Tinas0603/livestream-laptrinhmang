@@ -19,7 +19,7 @@
 import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 
 const isPublicRoute = createRouteMatcher(['/sign-in(.*)', '/sign-up(.*)']);
-const isWebhookRoute = createRouteMatcher(['/api/webhooks(.*)', "/"]);
+const isWebhookRoute = createRouteMatcher(['/api/webhooks(.*)', "/", "/api/uploadthing"]);
 
 export default clerkMiddleware((auth, request) => {
     // Kiểm tra xem route hiện tại có phải là route công khai hoặc route webhook không
