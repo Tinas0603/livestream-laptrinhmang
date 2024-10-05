@@ -40,8 +40,6 @@ export const createViewerToken = async (hostIdentity: string) => {
             name: self.username,
         }
     );
-    // Log token để kiểm tra
-    console.log("Generated Token:", token.toJwt());
 
     token.addGrant({
         room: host.id,
